@@ -40,5 +40,6 @@ parcial_2 = float(input("Ingresa la calificaion parcial 2 : "))
 parcial_3 = float(input("Ingresa la calificaion parcial 3 : "))
 parcial_4 = float(input("Ingresa la calificaion parcial 4 : "))
 
-promedio_final1 = (parcial_1 + parcial_2 + parcial_3 + parcial_4)
+promedio_final1 = (parcial_1 + parcial_2 + parcial_3 + parcial_4) * PESO_PARCIAL
+print(promedio_final1)
 print("APROBADO" if promedio_final1 >= CALIFICACION_MINIMA else "REPROBADO")
