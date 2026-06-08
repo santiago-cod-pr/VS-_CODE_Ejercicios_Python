@@ -25,7 +25,7 @@ print (type(dato))
 #USO DE CONSTANTES EN UN CALCULO
 precio_base = 500.0
 precio_final = precio_base * (1 + TASA_IVA)   ##// Por regla algebraica, multiplicar cualquier número por 1 da como resultado el mismo número (500 * 1 = 500).
-print(f"Precio con IVA:  ${precio_final:.2f}") ## // f = Activa las f-strings. Sirve para meter variables directamente dentro del texto usando llaves {}
+print(f"Precio con IVA:  ${precio_final:.2f}") # // f = Activa las f-strings. Sirve para meter variables directamente dentro del texto usando llaves {}
 
 print("")
 
