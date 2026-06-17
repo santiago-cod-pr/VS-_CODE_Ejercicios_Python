@@ -61,3 +61,50 @@ else:
         
 
 # Tu turno: Crea una condición que verifique si un año es bisiesto. Un año es bisiesto si es divisible entre 4, Y si es divisible entre 100, también debe ser divisible entre 400. Pista: usa el operador % (módulo).
+
+
+año = int(input("INTRODUZCA EL AÑO PARA SABER SI ES BISIESTO: "))
+           
+if año % 4 == 0:
+     if año % 100 == 0:
+          if año % 400 == 0:
+              
+              print(f"El año: {año} ES BISIESTO !!!!")
+          else:
+              print(f"El año: {año} NO ES BISISESTO ****")
+
+     else:
+    #Si es divisble entre 4 pero NO entre 100
+            print(f"El año: {año} es bisiesto")
+
+# Si el año NO es divisble entre 4 se DESCARTA aqui:
+else:
+    print(f"El año: {año} NO ES BISIESTO. ***")
+
+
+
+
+
+
+#Opcion con elif comentado:
+"""
+
+año = int(input("Introduce un año: "))
+
+# 1. El filtro más pesado: si es de cambio de siglo, revisamos el 400 de una vez
+if año % 400 == 0:
+    print(f"El año {año} es bisiesto.")
+
+# 2. Si no fue el anterior, pero es divisible entre 100, se descarta (no es bisiesto)
+elif año % 100 == 0:
+    print(f"El año {año} NO es bisiesto.")
+
+# 3. Si no cumplió las anteriores, pero sí es divisible entre 4, sí es bisiesto
+elif año % 4 == 0:
+    print(f"El año {año} es bisiesto.")
+
+# 4. Cualquier otra cosa (como un número impar) no es bisiesto
+else:
+    print(f"El año {año} NO es bisiesto.")
+
+"""
