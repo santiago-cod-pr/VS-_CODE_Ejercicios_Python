@@ -2,6 +2,9 @@
 #Condicional anidada: Sistema de acceso
 #Usuario y contrasena correcta. Si el Usuario falla, ni siquiera revisa la contrasena
 
+
+#Tu turno: Reescribe el Ejercicio  usando una sola condición con and en lugar del if anidado. Luego compara las dos versiones: ¿cuál da mensajes de error más específicos y por qué?
+
 USUARIO_CORRECTO = "santiago"
 CONTRASENA_CORRECTA = "2007"
 
