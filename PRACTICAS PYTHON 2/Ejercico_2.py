@@ -40,9 +40,10 @@ else:
 if 0 <= nota <=10:
     print(f"Nota: {nota:.1f} -> {letra}")
 
+    # Tu turno: Agrega  un mensaje que diga cuántos puntos le faltan para subir de letra. Por ejemplo, si obtuvo 7.2 (letra C), necesita 0.8 puntos para llegar a la B.
+
     if letra_sig:
         print(f"Faltan {resta:.1f} puntos para llegar a la letra {letra_sig}")
     else:
         print("FELICIDADES, TIENE EL PUNTAJE MAS ALTO!!!")
 
-# Tu turno: Agrega  un mensaje que diga cuántos puntos le faltan para subir de letra. Por ejemplo, si obtuvo 7.2 (letra C), necesita 0.8 puntos para llegar a la B.
