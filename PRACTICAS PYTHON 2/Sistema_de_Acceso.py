@@ -7,7 +7,6 @@ CONTRASENA_CORRECTA = "2007"
 
 print("=========      LOGIN     ===========")
 print("====================================")
-
 print("=== INGRESE USURIO Y CONTRASENA ===")
 print("====================================")
 print("")
