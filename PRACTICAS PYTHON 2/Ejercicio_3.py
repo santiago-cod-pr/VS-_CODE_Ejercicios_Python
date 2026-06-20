@@ -57,10 +57,12 @@ min_cal = calificaciones[0]
 
 for calificacion in calificaciones:
     total = total + calificacion
-    if calificacion >= 6.0:
+    if calificacion >= 6.0:             #Turno: encuentra e imprime la calificación más alta y la más baja. Necesitarás dos variables que guarden el máximo y el mínimo mientras recorres la lista.
         aprobados = aprobados + 1
-
-       # if calificaciones> # AQUI EMPIEZ AEJDNVIUEVIVVEROI@@@@@@
+    if calificacion > max_cal:
+        max_cal = calificacion
+    if calificacion < min_cal:
+        min_cal = calificacion
 
 promedio = total / len(calificaciones)
 reprobados = len(calificaciones) - aprobados
@@ -68,8 +70,8 @@ reprobados = len(calificaciones) - aprobados
 print (f"\nPromedio del grupo: {promedio:.2f}")
 print (f"Aprobados: {aprobados}")
 print(f"Reprobados: {reprobados}")
-
-#Turno: encuentra e imprime la calificación más alta y la más baja. Necesitarás dos variables que guarden el máximo y el mínimo mientras recorres la lista.
+print(f"Calificación más alta: {max_cal}")
+print(f"Calificación más baja: {min_cal}")
 
 
 

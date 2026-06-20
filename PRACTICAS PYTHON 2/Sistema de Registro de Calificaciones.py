@@ -28,14 +28,62 @@ for i in range(NUMERO_ESTUDIANTES):
                 print("/// ERROR Ingrese la calificacion dentro del rango de 0 a 10 ///")
         except:
             print("!!! INGRESE UN NUMERO VALIDO !!!")
+            
+    nombres.append(nombre)                      # .append, para guardar los nombres en la variable del ciclo For
+    calificaciones.append(calificacion)         # .append, para guardar las calificaciones en la variable que esta dentro del while.
 
 
+# Bloque para mostar Resumen del registro de los nombres, calificaciones, estado y letra de cada alumno.
+print("\n========================================================")
+print ("==========    REGISTRO DE CALIFICACIONES     ==========")
+print("========================================================")
 
-nombres.append(nombre)                      # .append, para guardar los nombres en la variable del ciclo For
-calificaciones.append(calificacion)         # .append, para guardar las calificaciones en la variable que esta dentro del while.
+print (f"{'N.o.' :<5} {'Alumno' :<20} {'Calificacion' :<15} {"Estado" :<13} {"Letra" :<10}")
+print("-" * 70)
 
 
+for i, nombre in enumerate(nombres):
+    calificacion = calificaciones[i]
+    estado = "Aprobado" if calificacion >= CALIFICACION_MIN_APROB else "Reprobado"
+    
+    if calificacion >= 9:
+        letra = "A"
+    elif calificacion >= 8 and calificacion <= 8.9: 
+        letra = "B"
+    elif calificacion >= 7 and calificacion <= 7.9:
+        letra = "C"
+    elif calificacion >= 6 and calificacion <= 6.9:
+        letra = "D"
+    else:
+        letra = "F"
+
+    print(f"{i + 1:<5} {nombre:<20} {calificacion:<15.1f} {estado:<13} {letra:<10}")
 
 
+print("-"* 70)
+    
+# Bloque para obtener el promedio, el numero de aprobados, reprobados, calificacion mas alta y mas baja.
 
+TOTAL = 0
+APROBADOS = 0
 
+# Variables: Calificacion mas alta y mas baja
+max_cal = calificaciones[0]
+min_cal = calificaciones[0]
+
+for calificacion in calificaciones:
+    TOTAL =  TOTAL + calificacion
+    if calificacion >= CALIFICACION_MIN_APROB:
+        APROBADOS += 1
+    if calificacion > max_cal:
+        max_cal = calificacion
+    if calificacion < min_cal:
+        min_cal = calificacion
+
+promedio = TOTAL / len(calificaciones)
+reprobados = len(calificaciones) - APROBADOS
+
+print(f"\nPromedio del grupo: {promedio:.2f}")
+print(f"Aprobados: {APROBADOS} |  Reprobados: {reprobados}")
+print(f"Calificación más alta: {max_cal}")
+print(f"Calificación más baja: {min_cal}")
