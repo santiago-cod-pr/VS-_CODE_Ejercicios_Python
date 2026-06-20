@@ -18,7 +18,7 @@ for i in range(NUMERO_ESTUDIANTES):
     print(f"\n Estudiante: {i + 1}")
     nombre = input("Ingrese Nombre del Alumno: ")
 
-    # INGRESO DE LOS DATOS DE: CALIFICACION Y QUE SE ENCUENTREN DENTRO DEL RANGO DE 0 A 10:
+    # INGRESO DE LOS DATOS DE CALIFICACION Y QUE SE ENCUENTREN DENTRO DEL RANGO DE 0 A 10:
     while True:
         try:
             calificacion = float(input("Ingrese la Calificacion del Alumno: "))
