@@ -82,27 +82,3 @@ else:
     print(f"El año: {año} NO ES BISIESTO. ***")
 
 
-
-
-
-#Opcion con elif:
-
-
-año = int(input("Introduce un año: "))
-
-# 1. El filtro más pesado: si es de cambio de siglo, revisamos el 400 de una vez
-if año % 400 == 0:
-    print(f"El año {año} es bisiesto.")
-
-# 2. Si no fue el anterior, pero es divisible entre 100, se descarta (no es bisiesto)
-elif año % 100 == 0:
-    print(f"El año {año} NO es bisiesto.")
-
-# 3. Si no cumplió las anteriores, pero sí es divisible entre 4, sí es bisiesto
-elif año % 4 == 0:
-    print(f"El año {año} es bisiesto.")
-
-# 4. Cualquier otra cosa (como un número impar) no es bisiesto
-else:
-    print(f"El año {año} NO es bisiesto.")
-
