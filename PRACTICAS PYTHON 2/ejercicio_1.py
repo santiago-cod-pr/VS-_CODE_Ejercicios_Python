@@ -85,9 +85,8 @@ else:
 
 
 
+#Opcion con elif:
 
-#Opcion con elif comentado:
-"""
 
 año = int(input("Introduce un año: "))
 
@@ -107,4 +106,3 @@ elif año % 4 == 0:
 else:
     print(f"El año {año} NO es bisiesto.")
 
-"""
