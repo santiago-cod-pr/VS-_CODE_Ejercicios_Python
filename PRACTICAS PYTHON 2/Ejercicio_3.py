@@ -34,7 +34,7 @@ print("! Despegue")
 
 #Tu turno: Escribe un for que imprima solo los múltiplos de 3 entre 3 y 30 usando range() con los argumentos correctos. No uses if dentro del for para filtrar — usa el paso de range().
 
-print("INCREMENTO MULTIPLOS DE 3")
+print("INCREMENTO MULTIPLOS DE 3 a 30")
 for i in range(3, 31, 3):
     print(i, end=" ")
 print("")
@@ -57,7 +57,7 @@ min_cal = calificaciones[0]
 
 for calificacion in calificaciones:
     total = total + calificacion
-    if calificacion >= 6.0:             #Turno: encuentra e imprime la calificación más alta y la más baja. Necesitarás dos variables que guarden el máximo y el mínimo mientras recorres la lista.
+    if calificacion >= 6.0:         # <----- (Aqui) Turno: encuentra e imprime la calificación más alta y la más baja. Necesitarás dos variables que guarden el máximo y el mínimo mientras recorres la lista.
         aprobados = aprobados + 1
     if calificacion > max_cal:
         max_cal = calificacion
