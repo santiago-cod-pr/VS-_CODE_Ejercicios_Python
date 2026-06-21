@@ -16,7 +16,19 @@ print(f"suma de 1 a {N}: {suma}")
 formula =  N * (N + 1)//2
 print(f"Verificacion con formula: {formula}")
 
-#Tu turno: Reescribe el ejercicio usando for en lugar de while. ¿Cuál versión es más natural para este problema? Explica por qué con tus palabras.
+# ---->> Tu turno: Reescribe el ejercicio usando for en lugar de while. ¿Cuál versión es más natural para este problema? 
+# Explica por qué con tus palabras. <<------
+
+#| RESPUESTA: El ciclo for es la mejor opcion ya que es mas compacta sin hacer tantas declaraciones |
+#| y porque conocemos la cantidad de iteraciones que hara el programa con la variable "N",          |
+
+N = int(input("Suma del 1 hasta: "))
+suma = 0
+
+for i in range(1, N+1):
+    suma = suma + i
+print(f"Suma de 1 a {N}: {suma}")
+
 
 
 
@@ -52,9 +64,9 @@ while True:
     intentos += 1
     if numero < NUMERO_SECRETO:
         print("## El numero es mayor, intenta otra vez ##")
-    else:
+    elif numero > NUMERO_SECRETO:
         print("## EL numero es menor, intentalo de nuevo ##")
-    if numero == NUMERO_SECRETO:
-     print(" HAZ DESCUBIERTO EL NUMERO SECRETO !!!!!")
-     print(f"En un total de:  {intentos} intentos (: ")
-     break
+    else:
+        print(" HAZ DESCUBIERTO EL NUMERO SECRETO !!!!!")
+        print(f"En un total de:  {intentos} intentos (: ")
+        break
