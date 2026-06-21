@@ -13,14 +13,14 @@ nombres = []         #   guarda los nombres de los estudiantes / se rellena con 
 calificaciones = []  #   guarda las calificaciones de los estudiantes / se rellena con el metodo .append
 
 
-# Ingreso de los nombres de los alumnos con el rango de la constante (15 alumnos)
+# Entrada de los nombres de alumnos con el rango de la constante (15 alumnos)
 for i in range(NUMERO_ESTUDIANTES):
     print(f"\n Estudiante: {i + 1}")
     nombre = input("Ingrese Nombre del Alumno: ")
 
     # INGRESO DE LOS DATOS DE CALIFICACION Y QUE SE ENCUENTREN DENTRO DEL RANGO DE 0 A 10:
-    while True:
-        try:
+    while True:     
+        try:                                                                          #bloque try-except para manejar errores de entrada, asegurando que se ingresara un número válido para la calificación.
             calificacion = float(input("Ingrese la Calificacion del Alumno: "))
             if 0.0 <= calificacion <= 10.0:
                 break
@@ -64,16 +64,16 @@ print("-"* 70)
     
 # Bloque para obtener el promedio, el numero de aprobados, reprobados, calificacion mas alta y mas baja.
 
-TOTAL = 0
-APROBADOS = 0
+TOTAL = 0 
+APROBADOS = 0   
 
 # Variables: Calificacion mas alta y mas baja
 max_cal = calificaciones[0]
 min_cal = calificaciones[0]
 
 for calificacion in calificaciones:
-    TOTAL =  TOTAL + calificacion
-    if calificacion >= CALIFICACION_MIN_APROB:
+    TOTAL =  TOTAL + calificacion               #Suma acumulada de las calificaciones para obtener el promedio al final del ciclo.
+    if calificacion >= CALIFICACION_MIN_APROB:  #Si la calificacion es mayor o igual a 6, se considera aprobada y se suma 1 al contador de aprobados.
         APROBADOS += 1
     if calificacion > max_cal:
         max_cal = calificacion
