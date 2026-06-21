@@ -14,7 +14,20 @@
 
 #------- Ejercicio: Tabla de Multiplicar ----------
 
-N = int(input("Hasta que tabla quieres?: "))
+N = int(input("¿Hasta qué tabla quieres? "))
+
+for tabla in range(1, N + 1):
+    print(f"--- Tabla del {tabla} ---")
+    for mult in range(1, 11):
+        resultado = tabla * mult
+        print(f"  {tabla} x {mult:2} = {resultado:3}")
+    print()    # línea en blanco entre tablas
+
+
+#Tu turno: Modifica el Ejercicio para imprimir solo los resultados impares de cada tabla. 
+# Necesitarás un if dentro del for interno que verifique si el resultado es impar usando el operador %.
+
+N = int(input("Hasta que tabla quieres (RESULTADOS IMPARES)?: "))
 
 for tabla in range(1, N+1):
     print(f"---- tabla del {tabla} ----")
@@ -24,16 +37,6 @@ for tabla in range(1, N+1):
         if resultado %2 !=0:                                 # <----Tu turno: Modifica el Ejercicio para imprimir solo los resultados impares de cada tabla.
             print(f" {tabla} x {mult:2} = {resultado:3}")
     print("") #linea en blanco entre tablas
-
-
-
-#Tu turno: Modifica el Ejercicio para imprimir solo los resultados impares de cada tabla. 
-# Necesitarás un if dentro del for interno que verifique si el resultado es impar usando el operador %.
-
-
-
-
-
 
 
 
@@ -69,7 +72,8 @@ for nota in notas:
         continue    # salta esta iteración, el ciclo continúa
     print(f"  Aprobado: {nota:.1f}")
 
-    #Tu turno: Reescribe el bloque de "Solo aprobados" del Ejercicio sin usar continue, usando un if normal. 
+#-----------------------------------------------------------------------------------------------------------------------------------------------
+#Tu turno: Reescribe el bloque de "Solo aprobados" del Ejercicio sin usar continue, usando un if normal. 
 # ¿El resultado es el mismo? ¿Cuál versión es más fácil de leer?
 
 
@@ -81,4 +85,4 @@ for nota in notas:
         print(f"  Aprobado: {nota:.1f}")
 
 # ¿El resultado es el mismo? ¿Cuál versión es más fácil de leer?
-# Es el mismo resultado, la version con el if es mas facil de entender, porque es directa para nuestra logica
+#/ RESPUESTA: Es el mismo resultado, la version con el if es mas facil de entender, porque es directa para nuestra logica /
