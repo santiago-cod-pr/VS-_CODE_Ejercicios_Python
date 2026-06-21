@@ -80,6 +80,7 @@ print(f"Calificación más baja: {min_cal}")
 #Ejercicio: for con enumerate(): indice y valor juntos
 # enumerate() te da la posicion y el valor en cada iteracion. Muy util para reportes numerados.
 
+
 alumnos = ["Iran", "Povedano", "Susana", "Candy", "Richard", "Itzayana", "Santiago"]
 notas = [9.0, 7.5, 8.0, 9.5, 6.0, 10.0, 9.0]
 
@@ -94,5 +95,34 @@ for i, alumno in enumerate(alumnos):
 
 
 
-    #Turno: Agrega al ejercicio un resumen al final del reporte: promedio del grupo y cantidad de aprobados, calculados dentro del mismo for que genera el reporte.
+#Turno: Agrega al ejercicio un resumen al final del reporte:
+#promedio del grupo y cantidad de aprobados, calculados dentro del mismo for que genera el reporte.
+
+
+#constantes de calificacion minima.
+CAL_MIN_APROB = 7.0
+#CONSTANTES PARA HACER EL RESUMEN, para sacar el promedio y la cantidad de aprobados.
+TOTAL = 0
+APROBADOS = 0
+#variables dentro de la lista para la calificacion mas alta y baja:
+max_cal = notas[0]
+min_cal = notas[0]
+
+#bloque para hacer el resumen
+for calificacion in notas:
+    TOTAL = TOTAL + calificacion    #suma acumulada para obtener el promedio al final del ciclo.
+    if calificacion >= CAL_MIN_APROB:
+        APROBADOS += 1
+    if calificacion > max_cal:
+        max_cal = calificacion
+    if calificacion < min_cal:
+        min_cal = calificacion
+
+promedio = TOTAL / len(notas)
+reprobados = len(notas) - APROBADOS
+
+print(f"\nPromedio del grupo: {promedio:.2f}")
+print(f"Aprobados: {APROBADOS} |||  Reprobados: {reprobados}")
+print(f"calificacion mas alta: {max_cal}")
+print(f"calificaion mas baja {min_cal}")
 
