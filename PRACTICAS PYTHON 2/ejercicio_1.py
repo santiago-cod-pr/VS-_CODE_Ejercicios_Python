@@ -80,5 +80,3 @@ if año % 4 == 0:
 # Si el año NO es divisble entre 4 se DESCARTA aqui:
 else:
     print(f"El año: {año} NO ES BISIESTO. ***")
-
-
