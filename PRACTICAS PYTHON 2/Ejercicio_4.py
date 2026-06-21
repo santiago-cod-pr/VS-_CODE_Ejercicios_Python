@@ -41,4 +41,20 @@ while True:
 
 print(f"Edad Registrada: {edad}")
 
-#Tu turno: Crea un programa que pida al usuario adivinar un número secreto (define tú el número con una constante). Con while, sigue pidiendo hasta que lo adivine e imprime cuántos intentos necesitó.
+#Tu turno: Crea un programa que pida al usuario adivinar un número secreto (define tú el número con una constante).
+#Con while, sigue pidiendo hasta que lo adivine e imprime cuántos intentos necesitó.
+
+NUMERO_SECRETO = 27
+intentos = 0
+
+while True:
+    numero = int(input("ADIVINA EL NUMERO SECRETO DENTRO DE 1 A 100: "))
+    intentos += 1
+    if numero < NUMERO_SECRETO:
+        print("## El numero es mayor, intenta otra vez ##")
+    else:
+        print("## EL numero es menor, intentalo de nuevo ##")
+    if numero == NUMERO_SECRETO:
+     print(" HAZ DESCUBIERTO EL NUMERO SECRETO !!!!!")
+     print(f"En un total de:  {intentos} intentos (: ")
+     break
