@@ -27,8 +27,8 @@ for i in range(ventas_registradas):
      except:
         print("## Ingrese un numero Valido ##")
 
-nombres.append(nombre)
-monto_venta.append(monto_de_venta)
+    nombres.append(nombre)
+    monto_venta.append(monto_de_venta)
 
 
 print("\n==================================================================")
