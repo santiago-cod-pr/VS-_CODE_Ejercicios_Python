@@ -52,11 +52,13 @@ for i in range(len(nombres)):
         porcentaje = 12
 
 
+    comision_pesos = monto_actual * (porcentaje / 100)
 
 
-
-print(f"{nombre_actual:<20} {monto_actual:<20} {'Comision %' :<15} {'Comision %' :<15}")
+    print(f"{nombre_actual:<20} {monto_actual:<20} {'Comision %' :<15} {'Comision %' :<15}")
 print("-" *70)
+
+
 
 
 
