@@ -44,7 +44,7 @@ for i in range(len(nombres)):
     monto_actual = monto_venta[i]
     if monto_actual < 500:         
         porcentaje = 3
-    elif monto_actual <= 1499.99:   
+    elif monto_actual <= 1999.99:   
         porcentaje = 5
     elif monto_actual <= 4999.99:   
         porcentaje = 8
@@ -55,7 +55,7 @@ for i in range(len(nombres)):
     comision_pesos = monto_actual * (porcentaje / 100)
 
 
-    print(f"{nombre_actual:<20} {monto_actual:<20} {'Comision %' :<15} {'Comision %' :<15}")
+    print(f"{nombre_actual:<20} {monto_actual:<20} {porcentaje:<14}% ${comision_pesos:<14.2f}")
 print("-" *70)
 
 
