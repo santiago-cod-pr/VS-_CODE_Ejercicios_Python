@@ -4,7 +4,7 @@ print("==================================================================")
 print("                         VENTAS DEL DIA")
 print("==================================================================")
 
-
+#variables con listas vacias (Se rellenan con el metodo .append)
 ventas_registradas = []
 numero_vendedores = []
 nombres = []
@@ -27,17 +27,18 @@ for i in range(ventas_registradas):
      except:
         print("## Ingrese un numero Valido ##")
 
-    nombres.append(nombre)
-    monto_venta.append(monto_de_venta)
+    nombres.append(nombre)      #< ---  captura de datos para rellenar "nombres" con el metodo .append
+    monto_venta.append(monto_de_venta)      #< ---  captura de datos para rellenar "monto_venta" con el metodo .append
 
-
+#Encabezados de la tabla del resumen:
 print("\n==================================================================")
 print("                     REPORTE DE COMISIONES       ")
 print("==================================================================")
 
 print(f"{'vendedor' :<20} {'Monto':<20} {'Comision %' :<15} {'Comision %' :<15}")
 
-#
+
+#Condiciones para asignar porcentaje de comisiones:
 
 for i in range(len(nombres)):
     nombre_actual = nombres[i]
@@ -63,10 +64,3 @@ print("-" *70)
 
 
 
-TOTAL = 0
-SUMA = 0
-
-for i, monto_de_venta in enumerate(monto_venta):
-    TOTAL = TOTAL + monto_de_venta
-
-suma_total = TOTAL
