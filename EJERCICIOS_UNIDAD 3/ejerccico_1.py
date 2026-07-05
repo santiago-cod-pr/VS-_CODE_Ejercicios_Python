@@ -17,7 +17,7 @@
 #-------------------------------------------------------------------------------------------------------------------
 
 #EJERCICIO 1: funcion vs Procedimiento:
-
+"""""
 def calcular_area_rectangulo(base, altura):
     area = base * altura
     return area # <-- regresa un valor: es FUNCION
@@ -53,7 +53,7 @@ if es_mayor_de_edad (edad):
 else:
     print ("NO es mayor de edad :(")
 
-
+"""
 
 #-------------------------------------------------------------------------------------------------------------------
 
@@ -67,3 +67,9 @@ print (resultado)
 #Tu turno: Corrige el Ejercicio 2 para que calcular_doble regrese el valor correctamente
 # con return, y que sea el print(resultado) el que se encargue de mostrarlo.
 
+def calcular_doble(numero):
+    doble = numero * 2
+    return doble
+
+resultado = calcular_doble(10)
+print (resultado)
