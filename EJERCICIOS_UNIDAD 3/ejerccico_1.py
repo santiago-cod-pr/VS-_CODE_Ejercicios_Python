@@ -17,7 +17,6 @@
 #-------------------------------------------------------------------------------------------------------------------
 
 #EJERCICIO 1: funcion vs Procedimiento:
-"""""
 def calcular_area_rectangulo(base, altura):
     area = base * altura
     return area # <-- regresa un valor: es FUNCION
@@ -53,7 +52,6 @@ if es_mayor_de_edad (edad):
 else:
     print ("NO es mayor de edad :(")
 
-"""
 
 #-------------------------------------------------------------------------------------------------------------------
 
