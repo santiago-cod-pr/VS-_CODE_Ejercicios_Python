@@ -49,6 +49,7 @@ def factorial_visual(n, nivel=0):
 
 factorial_visual(4)
 
+#-----------------------------------------------------------------------------------------------------------
 
 def FIBONACCI(n):
     if n == 0:  # CASO BASE 1
