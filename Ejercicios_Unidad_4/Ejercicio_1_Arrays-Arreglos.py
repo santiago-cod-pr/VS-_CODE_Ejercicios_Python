@@ -57,3 +57,47 @@ print()
 print("\nCon indice: ")
 for i, numero in enumerate(numeros):
     print(f"Posicion {i}: {numero}")
+
+#------------------------------------------------------------------------------------------------------
+#Busqueda lineal y operaciones de calculo
+#Ejercicio 3: busaqueday calculo sobre listas
+calificaciones = [8.5, 6.0, 9.5, 5.0, 7.5, 10.0, 4.5, 8.0]
+
+#Busqueda lineal
+def buscar_nota(lista, objetivo):
+    """ busca una nota en la lista. Regresa el inidice o -1 si no existe """
+    for i in range(len(lista)):
+        if lista [i] == objetivo:
+            return i
+    return -1
+
+indice = buscar_nota(calificaciones, 9.5)
+print(f"La nota 9.5 esta en la posicion: {indice}")
+
+indice = buscar_nota(calificaciones, 3.0)
+print(f"La nota 3.0 esta en la posicion: {indice}")
+
+
+#calculos sobre la lista:
+total = 0
+aprobados = 0
+mayor = calificaciones[0]
+menor = [0]
+
+for cal in calificaciones:
+    total += cal
+    if cal >= 6.0:
+        aprobados += 1
+    if cal > mayor:
+        mayor = cal
+    if cal < menor:
+        menor = cal
+
+    promedio = total / len(calificaciones)
+
+print(f"\nPromedio: {promedio:.2f}")
+print(f"Mayor:          {mayor}")
+print(f"Menor:          {menor}")
+print(f"Aprobados:  {aprobados}")
+print(f"Reprobados: {len(calificaciones) - aprobados}")
+
