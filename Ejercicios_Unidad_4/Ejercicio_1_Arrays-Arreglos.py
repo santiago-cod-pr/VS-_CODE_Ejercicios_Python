@@ -78,7 +78,7 @@ indice = buscar_nota(calificaciones, 3.0)
 print(f"La nota 3.0 esta en la posicion: {indice}")
 
 
-#calculos sobre la lista:
+#calculos sobre la lista
 total = 0
 aprobados = 0
 mayor = calificaciones[0]
